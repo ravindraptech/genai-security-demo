@@ -16,10 +16,10 @@ Generative AI Security Demo
      ```
    - Note: `torch` (PyTorch) is needed for the model. If GPU is available, install the GPU version (`pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118`).
 
-3. Start API Server
+3. **Start API Server**
    python3 local_llm_api_server.py
    
-4. Test with API Client
+4. **Test with API Client**
    python3 local_llm_api_client.py
 
    
