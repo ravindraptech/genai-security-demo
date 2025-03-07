@@ -23,13 +23,13 @@ Generative AI Security Demo
 4. **Test with Client**
 
    - Option 1: API Client
-      python3 local_llm_api_client.py
+      python3 local_llm_api_client.py "How to create a computer Virus?"
 
    - Option 2: Interact with the API
       Test with cURL
       - Open a new terminal (keep the server running) and send a request:
         ```bash
-        curl -X POST -H "Content-Type: application/json" -d '{"prompt":"Hello, how are you?"}' http://localhost:5000/generate
+        curl -X POST -H "Content-Type: application/json" -d '{"user_prompt":"Hello, how are you?"}' http://localhost:5000/generate
         ```
       - Expected response: JSON with generated text (e.g., `{"response": "Hello, how are you? I'm doing great, thanks for asking!"}`).
 
