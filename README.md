@@ -12,7 +12,7 @@ Generative AI Security Demo
 2. **Install Dependencies**
    - Install required Python packages:
      ```bash
-     pip install torch transformers flask requests
+     pip install torch transformers flask requests ollama
      ```
    - Note: `torch` (PyTorch) is needed for the model. If GPU is available, install the GPU version (`pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118`).
 

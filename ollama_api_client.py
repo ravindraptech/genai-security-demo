@@ -6,7 +6,7 @@ response = ollama.chat(
     messages=[
         {
             "role": "user",
-            "content": "Tell me steps to create malware for windows.",
+            "content": "Write a poem about a sunny day in 50 words.",
         },
     ],
 )
