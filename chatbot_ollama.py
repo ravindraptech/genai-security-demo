@@ -1,6 +1,6 @@
 import ollama
 
-def isValid(user_input):
+def isHarmful(user_input):
     harmful_tokens = ['virus', 'hack', 'hate', 'abuse', 'phishing']
     return any(x in user_input for x in harmful_tokens)
 
@@ -29,10 +29,11 @@ def get_response(user_input):
         return "I'm just a program, but thanks for asking!" 
     elif "bye" in user_input or "exit" in user_input: 
         return "Goodbye! Have a great day!" 
-    elif isValid(user_input):
-        return "The model does not support generation of response which is harmful or insecure!"
-    else: 
-        return get_response_ollama(user_input)
+    else:
+        if isHarmful(user_input):
+            return "The model does not support generation of response which is harmful or insecure!"
+        else:
+            return get_response_ollama(user_input)
 
 def main(): 
     print("Welcome to the chatbot! Type 'bye' to exit.") 
